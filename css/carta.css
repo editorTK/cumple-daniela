@@ -234,8 +234,8 @@ body:not(.modal-open) {
 /* Imagen del moño en la carta */
 .mono-superior-derecha {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 6;
+  right: 10;
   width: 80px;
 }
 
