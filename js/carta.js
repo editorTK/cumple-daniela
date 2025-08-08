@@ -31,6 +31,11 @@ window.addEventListener('DOMContentLoaded', () => {
       contenido.classList.remove('blur');
     }
   });
+
+  // Inicia la música automáticamente al cargar la página
+  audio.play().catch(err => console.warn('Autoplay bloqueado 😅'));
+  isPlaying = true;
+  playBtn.textContent = '⏸';
 });
 
 // ==============================
