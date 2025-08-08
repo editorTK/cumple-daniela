@@ -10,6 +10,7 @@
 </head>
 <body class="modal-open">
   <canvas id="confetti"></canvas>
+  <audio id="kitty-audio" src="../assets/cancion.mp3" autoplay style="display: none"></audio>
 
   <div id="modal" class="modal">
     <div class="modal-content">
@@ -22,23 +23,6 @@
     <!-- Título superior izquierdo -->
     <h1 class="titulo-fijo">Mi cartita para ti 💖</h1>
 
-    <!-- Pestaña Hello Kitty (esquina superior derecha) -->
-    <div class="pestana" id="pestana">
-      <img src="../assets/kitty-flecha.png" alt="Abrir música" class="kitty-flecha" />
-      <div class="pestana-modal" id="pestana-modal">
-        <img src="../assets/kitty_bailando.gif" alt="Hello Kitty" class="kitty-gif" loop />
-        <div class="audio-container">
-          <audio id="kitty-audio" autoplay>
-            <source src="../assets/cancion.mp3" type="audio/mpeg" />
-            Tu navegador no soporta audio.
-          </audio>
-          <div class="audio-controles">
-            <button id="play-btn">▶</button>
-            <input type="range" id="seek-bar" value="0" />
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="carta-container">
       <img src="../assets/moño.png" alt="Moño" class="mono-superior-derecha" />
