@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta para Daniela</title>
+  <link rel="stylesheet" href="../css/carta.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="modal-open">
+  <canvas id="confetti"></canvas> <!-- ⬅️ Mover arriba del todo -->
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>¡Feliz cumpleaños, Dani! 🎉</h2>
+      <p>Espero que esta carta te haga sonreír. 💌</p>
+    </div>
+  </div>
+
+  <div class="contenido"> <!-- ⬅️ Nuevo contenedor -->
+    <!-- Título superior izquierdo -->
+<h1 class="titulo-fijo">Mi cartita para ti 💖</h1>
+
+<!-- Pestaña Hello Kitty (esquina superior derecha) -->
+<div class="pestana" id="pestana">
+  <img src="../assets/kitty-flecha.png" alt="Abrir música" class="kitty-flecha" />
+  <div class="pestana-modal" id="pestana-modal">
+    <img src="../assets/kitty_bailando.gif" alt="Hello Kitty" class="kitty-gif" />
+    <div class="audio-container">
+      <audio id="kitty-audio">
+        <source src="../assets/cancion.mp3" type="audio/mpeg" />
+        Tu navegador no soporta audio.
+      </audio>
+      <div class="audio-controles">
+        <button id="play-btn">▶</button>
+        <input type="range" id="seek-bar" value="0" />
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="carta-container">
+      <h1>TE AMO 💗</h1>
+      <div class="carta-texto">
+        <p>Hoy es un día muy especial porque nació una personita que ilumina todo con su sonrisa...</p>
+        <p>Y esa persona eres tú, Dani. 🌸</p>
+        <p>No sé cómo explicarlo, pero contigo todo se siente más bonito, más suave, más tú.</p>
+        <p>Esta carta es solo una forma pequeña de decirte lo mucho que me importas, lo mucho que te admiro y lo feliz que me haces.</p>
+        <p>Te quiero con todo, de verdad. Gracias por existir. 💕</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/carta.js"></script>
+</body>
+</html>
+ 

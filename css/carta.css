@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #e3f2fd);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carta-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.carta-texto {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* MODAL ACTUALIZADO */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: pop 0.4s ease;
+  max-width: 90%;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Confeti canvas */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Scroll control */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+body:not(.modal-open) {
+  overflow: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+  .carta-container {
+    width: 90%;
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .carta-texto {
+    font-size: 1rem;
+  }
+}
+
+/*/* Cuando el modal está activo, aplica desenfoque al fondo */
+.blur {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+/* Confetti canvas encima de todo */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Título arriba a la izquierda */
+.titulo-fijo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 1.8rem;
+  color: #e91e63;
+  z-index: 5;
+  margin: 0;
+}
+
+/* Pestaña con flecha */
+.pestana {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  z-index: 15;
+  cursor: pointer;
+}
+
+.flecha {
+  font-size: 1.5rem;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.pestana-modal {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 200px;
+  animation: fadeIn 0.3s ease;
+}
+
+.pestana.open .pestana-modal {
+  display: flex;
+}
+
+.pestana.open .flecha {
+  transform: rotate(90deg);
+}
+
+.kitty-gif {
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* Animación suave de aparición */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Imagen reemplazando flecha */
+.kitty-flecha {
+  width: 100px;
+  cursor: pointer;
+  z-index: 30;
+  transition: transform 0.3s ease;
+}
+
+/* Modal encima de la imagen */
+.pestana {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  z-index: 30;
+}
+
+.pestana-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 60px;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.pestana.open .pestana-modal {
+  display: flex;
+}
+
+.kitty-gif {
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* 🎵 Reproductor personalizado */
+.audio-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.audio-controles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#play-btn {
+  background: #f8bbd0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#play-btn:hover {
+  background: #f48fb1;
+}
+
+#seek-bar {
+  flex: 1;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: #e91e63;
+  outline: none;
+}
+
+#seek-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #e91e63;
+  cursor: pointer;
+}
