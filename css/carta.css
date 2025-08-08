@@ -16,6 +16,7 @@ body {
   max-width: 700px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 h1 {
@@ -149,8 +150,7 @@ body:not(.modal-open) {
 
 .pestana-modal {
   position: absolute;
-  top: auto;
-  bottom: 110%;
+  top: 0;
   right: 0;
   width: 180px;
   background: rgba(255, 255, 255, 0.95);
@@ -161,7 +161,7 @@ body:not(.modal-open) {
   flex-direction: column;
   align-items: center;
   animation: fadeIn 0.3s ease;
-  margin-bottom: 10px;
+  z-index: 40;
 }
 
 .pestana.open .pestana-modal {
@@ -220,4 +220,30 @@ body:not(.modal-open) {
   background: white;
   border: 2px solid #e91e63;
   cursor: pointer;
+}
+
+/* Imagen del moño en la carta */
+.mono-superior-derecha {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+}
+
+/* Botón para la siguiente página */
+.btn-siguente {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #e91e63;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-siguente:hover {
+  background: #d81b60;
 }
