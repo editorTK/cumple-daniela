@@ -58,16 +58,6 @@ h1 {
   overflow-y: auto;
 }
 
-/* Confeti canvas */
-#confetti {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: 100vw;
-  height: 100vh;
-  z-index: 11;
-}
 
 @keyframes pop {
   from { transform: scale(0.8); opacity: 0; }
@@ -105,7 +95,7 @@ body:not(.modal-open) {
   }
 }
 
-/*/* Cuando el modal está activo, aplica desenfoque al fondo */
+/* Cuando el modal está activo, aplica desenfoque al fondo */
 .blur {
   filter: blur(5px);
   transition: filter 0.3s ease;
@@ -133,52 +123,6 @@ body:not(.modal-open) {
   margin: 0;
 }
 
-/* Pestaña con flecha */
-.pestana {
-  position: absolute;
-  top: 40px;
-  right: 30px;
-  z-index: 15;
-  cursor: pointer;
-}
-
-.flecha {
-  font-size: 1.5rem;
-  background: #fff;
-  border-radius: 50%;
-  padding: 8px 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.pestana-modal {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  width: 200px;
-  animation: fadeIn 0.3s ease;
-}
-
-.pestana.open .pestana-modal {
-  display: flex;
-}
-
-.pestana.open .flecha {
-  transform: rotate(90deg);
-}
-
-.kitty-gif {
-  width: 100px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
 
 /* Animación suave de aparición */
 @keyframes fadeIn {
@@ -198,24 +142,26 @@ body:not(.modal-open) {
 .pestana {
   position: absolute;
   top: 40px;
-  right: 30px;
+  right: 10px;
   z-index: 30;
+  cursor: pointer;
 }
 
 .pestana-modal {
   position: absolute;
-  top: 0;
+  top: auto;
+  bottom: 110%;
   right: 0;
-  margin-top: 60px;
-  width: 220px;
+  width: 180px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
-  padding: 15px;
+  padding: 10px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   display: none;
   flex-direction: column;
   align-items: center;
   animation: fadeIn 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .pestana.open .pestana-modal {
@@ -223,7 +169,7 @@ body:not(.modal-open) {
 }
 
 .kitty-gif {
-  width: 100px;
+  width: 80px;
   margin-bottom: 10px;
   border-radius: 10px;
 }

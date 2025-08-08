@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body class="modal-open">
-  <canvas id="confetti"></canvas> <!-- ⬅️ Mover arriba del todo -->
+  <canvas id="confetti"></canvas>
 
   <div id="modal" class="modal">
     <div class="modal-content">
@@ -18,27 +18,28 @@
     </div>
   </div>
 
-  <div class="contenido"> <!-- ⬅️ Nuevo contenedor -->
+  <div class="contenido">
     <!-- Título superior izquierdo -->
-<h1 class="titulo-fijo">Mi cartita para ti 💖</h1>
+    <h1 class="titulo-fijo">Mi cartita para ti 💖</h1>
 
-<!-- Pestaña Hello Kitty (esquina superior derecha) -->
-<div class="pestana" id="pestana">
-  <img src="../assets/kitty-flecha.png" alt="Abrir música" class="kitty-flecha" />
-  <div class="pestana-modal" id="pestana-modal">
-    <img src="../assets/kitty_bailando.gif" alt="Hello Kitty" class="kitty-gif" />
-    <div class="audio-container">
-      <audio id="kitty-audio">
-        <source src="../assets/cancion.mp3" type="audio/mpeg" />
-        Tu navegador no soporta audio.
-      </audio>
-      <div class="audio-controles">
-        <button id="play-btn">▶</button>
-        <input type="range" id="seek-bar" value="0" />
+    <!-- Pestaña Hello Kitty (esquina superior derecha) -->
+    <div class="pestana" id="pestana">
+      <img src="../assets/kitty-flecha.png" alt="Abrir música" class="kitty-flecha" />
+      <div class="pestana-modal" id="pestana-modal">
+        <img src="../assets/kitty_bailando.gif" alt="Hello Kitty" class="kitty-gif" />
+        <div class="audio-container">
+          <audio id="kitty-audio">
+            <source src="../assets/cancion.mp3" type="audio/mpeg" />
+            Tu navegador no soporta audio.
+          </audio>
+          <div class="audio-controles">
+            <button id="play-btn">▶</button>
+            <input type="range" id="seek-bar" value="0" />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
     <div class="carta-container">
       <h1>TE AMO 💗</h1>
       <div class="carta-texto">
@@ -54,4 +55,3 @@
   <script src="../js/carta.js"></script>
 </body>
 </html>
- 
